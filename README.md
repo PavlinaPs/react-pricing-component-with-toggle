@@ -34,12 +34,12 @@ Users should be able to:
 
 | Mobile layout |
 |:--:|
-![Mobile layout](./screenshots/screenshot-mobile.jpg) ![Mobile layout](./screenshots/screenshot-mobile-open-hamburger.jpg)
+![Mobile layout](./screenshots/screenshot-mobile-annually.jpg) ![Mobile layout](./screenshots/screenshot-mobile-monthly.jpg)
 
 ### Links
 
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: https://github.com/PavlinaPs/react-pricing-component-with-toggle
+- Live Site URL: https://pavlinaps.github.io/react-pricing-component-with-toggle/
 
 ## My process
 
