@@ -2,7 +2,7 @@ import React from 'react'
 
 const PricingBlock = (props) => {
   return (
-    <section className={props.class}>
+    <section className={props.background === "white" ? "pricing__block--white" : "pricing__block--blue"}>
         <h2 className="pricing__block-name">{props.name}</h2>
         <h1 className="pricing__block-price">
             {props.switchAnnually ? props.priceAnnually : props.priceMonthly}

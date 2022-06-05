@@ -14,7 +14,7 @@ const PricingBlocks = (props) => {
             storage={item.storage}
             userCount={item.userCount}
             sendSize={item.sendSize}
-            class={item.class}
+            background={item.background}
             switchAnnually={props.switchAnnually}
         />
       ))}

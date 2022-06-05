@@ -112,8 +112,10 @@ body {
   gap: 2.4rem;
   margin-top: 4rem;
   color: var(--clr-light-grayish-blue);
+}
 
-  margin-bottom: 4rem;
+.pricing__switch-container > p {
+  cursor: pointer;
 }
 
 .pricing__switch {
@@ -123,6 +125,7 @@ body {
   background-color: var(--clr-gradient2);
   background: linear-gradient(var(--clr-gradient1), var(--clr-gradient2));
   border-radius: 1.5rem;
+  cursor: pointer;
 }
 
 .pricing__switch--annually,
