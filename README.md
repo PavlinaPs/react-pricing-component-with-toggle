@@ -30,7 +30,7 @@ Users should be able to:
 
 | Desktop layout |
 |:--:|
-![Desktop layout](./screenshots/screenshot-desktop.jpg)
+![Desktop layout](./screenshots/screenshot-desktop-annually.jpg)
 
 | Mobile layout |
 |:--:|
