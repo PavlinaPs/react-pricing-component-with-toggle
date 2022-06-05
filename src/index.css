@@ -11,28 +11,20 @@
   --clr-very-light-grayish-blue: hsl(240, 78%, 98%);
   --clr-white: hsl(0, 0%, 100%);
   
-  --clr-light-grayish-blue-body: hsl(207, 33%, 98%);
-  --clr-grayish-blue-a: hsla(231, 7%, 65%, 0.5);
-
   /* box shadow colors */
   --clr-bs: hsla(233, 13%, 49%, 0.2);
 
   /* typography */
   --ff: 'Montserrat', sans-serif;
 
-  --fs-title-mobile: 3.2rem;
-  --fs-normal-mobile: 1.5rem;
+  --fs-button: 1.3rem;
+  --fs-normal: 1.5rem;
+  --fs-h2: 1.8rem;
+  --fs-title: 3.2rem;
+  --fs-dollar: 4rem;
+    /* device specific */
   --fs-h1-mobile: 7rem;
-  --fs-h2-mobile: 1.8rem;
-  --fs-dollar-mobile: 4rem;
-  --fs-button-mobile: 1.3rem;
-
-  --fs-CTA-mobile: 1.375rem;
-
-  --fs-normal-desktop: 1.5rem;
-  --fs-nav-desktop: 1.6rem;
-  --fs-h1-desktop: 6.4rem;
-  --fs-CTA-desktop: 1.63rem;
+  --fs-h1-desktop: 7.2rem;
 
   --fw-bold: 700;
 }
@@ -62,11 +54,11 @@ a {
 
 /* set-up */
 body {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; */
+  min-height: 100vh;
 }
 
 .pricing {
@@ -75,33 +67,29 @@ body {
   height: 175rem;
   font-family: var(--ff);
   font-weight: var(--fw-bold);
-  font-size: var(--fs-normal-mobile);
+  font-size: var(--fs-normal);
   color: var(--clr-grayish-blue);
   background-color: var(--clr-very-light-grayish-blue);
   background-image: url(./images/bg-top.svg);
   background-position: 19.3rem -4rem;
   background-repeat: no-repeat;
-  /* box-shadow: 0 0 1rem var(--clr-bs); */
-  border: 1px solid red;
+  box-shadow: 0 0 2rem var(--clr-bs);
 }
 
 @media (min-width: 65em) {
-  body {
-    font-size: var(--fs-normal-desktop);
-  }
-
   .pricing {
     width: 144rem;
     height: 85rem;
     background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
-    background-position: 50% top, 50% bottom;
+    background-position: right top, left bottom;
     background-repeat: no-repeat, no-repeat;
   }
 }
 
+/* title & switch */
 .pricing__title {
-  margin-top: 6.3rem;
-  font-size: var(--fs-title-mobile);
+  padding-top: 6.3rem;
+  font-size: var(--fs-title);
   text-align: center;
 }
 
@@ -128,6 +116,11 @@ body {
   cursor: pointer;
 }
 
+.pricing__switch:hover {
+  background: none;
+  background-color: var(--clr-gradient1);
+}
+
 .pricing__switch--annually,
 .pricing__switch--monthly {
   position: absolute;
@@ -147,6 +140,7 @@ body {
   right: 0.5rem;
 }
 
+/* pricing blocks */
 .pricing__block-container {
   margin-top: 8rem;
 }
@@ -173,8 +167,36 @@ body {
   background: linear-gradient(var(--clr-gradient1), var(--clr-gradient2));
 }
 
+@media (min-width: 65em) {
+  .pricing__block-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+  }
+
+  .pricing__block--white:not(:first-child),
+  .pricing__block--blue:not(:first-child),
+  .pricing__block--white {
+    margin: 0;
+  }
+
+  .pricing__block--white,
+  .pricing__block--blue {
+    width: 35rem;
+  }
+
+  .pricing__block--blue {
+    height: 50rem;
+    margin-top: 0;
+    padding-top: 5.8rem;
+    z-index: 1;
+  }
+}
+
+/* inside pricing block */
 .pricing__block-name {
-  font-size: var(--fs-h2-mobile);
+  font-size: var(--fs-h2);
 }
 
 .pricing__block-price {
@@ -193,7 +215,7 @@ body {
   position: relative;
   bottom: 0.9rem;
   right: 0.3rem;
-  font-size: var(--fs-dollar-mobile);
+  font-size: var(--fs-dollar);
 }
 
 .pricing__block-text-container {
@@ -211,7 +233,7 @@ body {
   margin-top: 3.2rem;
   padding: 1.4rem 0;
   font-family: var(--ff);
-  font-size: var(--fs-button-mobile);
+  font-size: var(--fs-button);
   font-weight: var(--fw-bold);
   color: var(--clr-white);
   letter-spacing: 0.15rem;
@@ -238,6 +260,25 @@ body {
 .pricing__block--blue .pricing__block-button:hover {
   color: var(--clr-white);
   background-color: transparent;
+}
+
+@media (min-width: 65em) {
+  .pricing__block-price {
+    font-size: var(--fs-h1-desktop);
+  }
+
+  .pricing__block-price::before {
+    bottom: 1rem;
+    right: 0.3rem;
+  }
+
+  .pricing__block-text {
+    padding: 1.6rem 0 1.65rem;
+  }
+
+  .pricing__block-button {
+    width: 29.2rem;
+  }
 }
 
 /* attribution */
