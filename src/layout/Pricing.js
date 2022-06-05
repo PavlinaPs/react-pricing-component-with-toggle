@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 
 const Pricing = () => {
-  const [ switchAnnually, setSwitchAnnually ] = useState(true);
+  const [ switchAnnually, setSwitchAnnually ] = useState(false);
 
   const pricingChange = () => {
      setSwitchAnnually(!switchAnnually)
