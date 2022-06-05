@@ -54,7 +54,27 @@ Users should be able to:
 
 ### What I learned
 
-conditionally rendered className
+This is a perfect challenge for React.js beginners.
+**I am really happy how it went and excited about React.js!**
+And I love ternary expressions!
+
+- I used useState hook for the switch. The annual/monthly price changes according to state.
+- I created a data.json file, this way another pricing block can be added anytime, I map over data's items and create \<PricingBlock /> component for each one:
+```jsx
+const PricingBlocks = (props) => {
+  return (
+    <div className="pricing__block-container">
+      {data.items.map(item => (
+        <PricingBlock 
+            ...
+        />
+      ))}
+    </div>
+  )
+}
+```
+- I conditionally added className for the white bullet inside the switch and for the block background.
+
 ```jsx
 const PricingSwitch = (props) => {
   return (
@@ -70,26 +90,13 @@ const PricingSwitch = (props) => {
 }
 ```
 
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-
-
 ### Continued development
-
+I need to continue to add more features that React.js provides. 
 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com)
-- [Example resource 2](https://www.example.com)
+- [Dave Gray React tutorials](https://www.youtube.com/playlist?list=PL0Zuz27SZ-6PrE9srvEn8nbhOOyxnWXfp)
 
 ## Author
 
